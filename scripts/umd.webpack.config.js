@@ -3,7 +3,9 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const LIBRARY_NAME = 'material-ui';
+
+const LIBRARY_NAME = 'ReactMaterialUI';
+
 const baseConfig = {
   entry: {
     'material-ui': path.join(__dirname, '../src/index.js'),
@@ -53,7 +55,7 @@ let config;
 if (process.env.NODE_ENV === 'production') {
   config = Object.assign({}, baseConfig, {
     output: Object.assign({}, baseConfig.output, {
-      filename: `${LIBRARY_NAME}.production.min.js`,
+      filename: `${LIBRARY_NAME}.min.js`,
     }),
     plugins: baseConfig.plugins.concat([
       new webpack.DefinePlugin({

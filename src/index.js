@@ -9,8 +9,11 @@ export { default as BottomNavigation, BottomNavigationButton } from './BottomNav
 export { default as Button } from './Button';
 
 export { default as Card, CardActions, CardContent, CardHeader, CardMedia } from './Card';
+export {
+  default as Checkbox,
+  LabelCheckbox,
+} from './Checkbox';
 
-export { default as Checkbox } from './Checkbox';
 export { default as Chip } from './Chip';
 
 export {
@@ -46,18 +49,27 @@ export {
 
 export { default as Menu, MenuItem, MenuList } from './Menu';
 
+export { default as MobileStepper } from './MobileStepper';
+
 export { default as Paper } from './Paper';
 
 export { CircularProgress, LinearProgress } from './Progress';
 
-export { default as Radio, RadioGroup } from './Radio';
+export {
+  default as Radio,
+  LabelRadio,
+  RadioGroup,
+} from './Radio';
 
 export { default as Snackbar, SnackbarContent } from './Snackbar';
 
-export { MuiThemeProvider } from './styles';
+export {
+  Colors,
+  MuiThemeProvider,
+} from './styles';
 
 // eslint-disable-next-line import/first
-import * as colors from './colors';
+import * as Colors from './colors';
 
 export { colors };
 
@@ -81,3 +93,13 @@ export { default as Typography } from './Typography';
 export { default as TextField } from './TextField';
 
 export { default as Toolbar } from './Toolbar';
+
+import { default as Collapse } from './transitions/Collapse';
+import { default as Fade } from './transitions/Fade';
+import { default as Slide } from './transitions/Slide';
+
+export const transitions = {
+  Collapse,
+  Fade,
+  Slide
+};
